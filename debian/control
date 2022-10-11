@@ -1,0 +1,34 @@
+Source: libppix-utilities-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Salvatore Bonaccorso <carnil@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 8), libmodule-build-perl
+Build-Depends-Indep:
+ libexception-class-perl,
+ libppi-perl,
+ libreadonly-perl,
+ libtask-weaken-perl,
+ libtest-deep-perl,
+ perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libppix-utilities-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libppix-utilities-perl.git
+Homepage: https://metacpan.org/release/PPIx-Utilities
+Testsuite: autopkgtest-pkg-perl
+
+Package: libppix-utilities-perl
+Architecture: all
+Depends:
+ libexception-class-perl,
+ libppi-perl,
+ libreadonly-perl,
+ libtask-weaken-perl,
+ ${misc:Depends},
+ ${perl:Depends}
+Description: Perl module containing extensions to PPI
+ This is a collection of functions for dealing with PPI objects, many of which
+ originated in Perl::Critic. They are organized into modules by the kind of
+ PPI class they relate to, by replacing the "PPI" at the front of the module
+ name with "PPIx::Utilities", e.g. functionality related to PPI::Nodes is in
+ PPIx::Utilities::Node.
